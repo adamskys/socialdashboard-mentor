@@ -26,7 +26,7 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Social-Dashboard](https://adamskys.github.io/socialdashboard-mentor/)
 
 ## My process
 
