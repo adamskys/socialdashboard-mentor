@@ -69,9 +69,9 @@ p,
     border-top: 3px solid var(--twitter); }
   .main-cards .card:nth-of-type(3) {
     border-top: 3px solid transparent;
-    background-image: linear-gradient(var(--card-blue), var(--card-blue)), radial-gradient(circle at top left, #fdc468, #df4996);
-    background-origin: border-box;
-    background-clip: content-box, border-box; }
+    background: linear-gradient(var(--card-blue), var(--card-blue)), linear-gradient(to right, #fdc468, #df4996);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box; }
   .main-cards .card:nth-of-type(4) {
     border-top: 3px solid var(--youtube); }
 
