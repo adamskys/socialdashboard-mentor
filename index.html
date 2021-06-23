@@ -11,7 +11,7 @@
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 </head>
-<body>
+<body data-theme="dark">
 
   <main class="container">
   <header class="header">
@@ -20,13 +20,19 @@
   <p>Total Followers: 23,004</p>
   </div>
 
-  <div class="toggle">
-  <p>Dark Mode</p>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
-  </div>
+  <!--  <div class="theme-switcher"> -->
+    <!-- <span>Dark mode</span> -->
+    <!-- <label for="switcher"></label> -->
+  <!-- </label> -->
+  <!-- <input type="checkbox" class="switcher"> -->
+  <!-- </div> -->
+  <div class="switcher">
+    <span>Dark mode</span>
+  <input type="checkbox" id="example"/>
+  <label for="example" class="toggle">
+  <div class="slider"></div>
+</label>
+</div>
   </header>
 
   
@@ -61,6 +67,7 @@
 
 
   <h2>Overview - Today</h2>
+ 
 
   <section class="secondary-cards">
   <div class="card card-overview">
@@ -124,5 +131,6 @@
     Coded by <a href="#">Mario Adamski</a>.
   </div>
   </main>
+  <script src="./script.js"></script>
 </body>
 </html>

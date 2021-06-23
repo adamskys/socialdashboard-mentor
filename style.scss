@@ -1,10 +1,7 @@
 :root {
-  --background-blue: hsl(230, 17%, 14%);
-  --top-blue: hsl(232, 19%, 15%);
-  --card-blue: hsl(228, 28%, 20%);
   --card-hover: hsl(228, 28%, 24%);
-  --text-blue: hsl(228, 34%, 66%);
-  --text-white: hsl(0, 0%, 100%);
+  --text: hsl(228, 34%, 66%);
+  --white: hsl(0, 0%, 100%);
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
@@ -21,15 +18,45 @@
   font-size: 14px;
 }
 
+body[data-theme="dark"] {
+  --background: hsl(230, 17%, 14%);
+  --top: hsl(232, 19%, 15%);
+  --card: hsl(228, 28%, 20%);
+  --card-hover: hsl(228, 28%, 24%);
+  --main-text: hsl(228, 34%, 66%);
+  --headings: hsl(0, 0%, 100%);
+}
+
+body[data-theme="light"] {
+  --background: hsl(0, 0%, 100%);
+  --top: hsl(225, 100%, 98%);
+  --card: hsl(227, 47%, 96%);
+  --card-hover: hsl(227, 47%, 92%);
+  --main-text: hsl(228, 12%, 44%);
+  --headings: hsl(230, 17%, 14%);
+}
+
 html,
 body {
   height: 100%;
-  background-color: var(--background-blue);
+  background: var(--background);
+  transition: 0.4s;
 }
+
+body:before {
+  content: '';
+  position: fixed;
+  height: 30%;
+  width: 100%;
+  background: var(--top);
+  z-index: 1;
+  transition: 0.4s;
+}
+
 
 h1,
 h2 {
-  color: var(--text-white);
+  color: var(--headings);
 }
 
 h1 {
@@ -42,9 +69,9 @@ h2 {
 }
 
 p,
-.toggle,
+.theme-switcher,
 .card p {
-  color: var(--text-blue);
+  color: var(--main-text);
 }
 
 .container {
@@ -53,25 +80,78 @@ p,
   height: 100vh;
   justify-content: center;
   align-items: center;
-  row-gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .header {
   display: grid;
   grid-template-columns: 50% 50%;
 
-  .toggle {
+  .switcher {
     display: flex;
     justify-content: flex-end;
-  }
+    align-items: center;
 
-  p {
-    margin-right: 5px;
+    span {
+      color: var(--main-text);
+      margin-right: 1rem;
+    }
+
+    .toggle {
+      cursor: pointer;
+      background: linear-gradient(to right, hsl(210, 78%, 45%), hsl(146, 68%, 45%));
+      width: 60px;
+      height: 32px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        transition: 0.4s;
+      }
+    }
+
+    .toggle-active {
+      width: 60px;
+      height: 32px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    input {
+      display: none;
+    }
+
+    .slider {
+      height: 24px;
+      width: 24px;
+      background-color: var(--top);
+      border-radius: 12px;
+      margin: 4px;
+    }
+
+    input:checked+.toggle {
+      background: gray;
+
+      &:hover {
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        transition: 0.4s;
+      }
+    }
+
+    input:checked+.toggle>.slider {
+      align-self: flex-end;
+    }
   }
 }
 
+
 .main-cards {
-  max-width: 80vw;
+  max-width: 100vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   column-gap: 1.5rem;
@@ -87,7 +167,7 @@ p,
 
   .card:nth-of-type(3) {
     border-top: 3px solid transparent;
-    background: linear-gradient(var(--card-blue), var(--card-blue)), linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background: linear-gradient(var(--card), var(--card)), linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
   }
@@ -108,15 +188,15 @@ p,
 .card {
   display: grid;
   height: 200px;
-  width: 230px;
+  // width: 230px;
   align-items: center;
   grid-template-rows: 35% 20% 18% 30%;
   justify-items: center;
-  background: var(--card-blue);
+  background: var(--card);
   border-radius: 0.3rem;
 
   p:nth-child(2) {
-    color: var(--text-white);
+    color: var(--headings);
     font-size: 3.3rem;
     font-weight: 700;
   }
@@ -174,7 +254,7 @@ p,
 
   :nth-child(3) {
     font-size: 2rem;
-    color: var(--text-white);
+    color: var(--headings);
     font-weight: 700;
     opacity: 1;
   }
@@ -198,7 +278,7 @@ p,
 .attribution {
   font-size: 11px;
   text-align: center;
-  color: white;
+  color: var(--headings);
 
   a {
     color: hsl(228, 45%, 44%);
@@ -207,6 +287,10 @@ p,
 }
 
 @media (max-width: 605px) {
+  .container {
+    row-gap: 1rem;
+  }
+
   .header {
     display: flex;
     flex-direction: column;
