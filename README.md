@@ -19,8 +19,11 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 ### Screenshot
 
-![](./images/social-dashboard.png)
+Dark theme
+![](./design/darksocial.png)
 
+Light theme
+![](./design/lightsocial.png)
 
 ### Links
 
