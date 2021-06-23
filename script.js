@@ -8,3 +8,4 @@ input.addEventListener('change', (e) => {
     document.body.setAttribute('data-theme', 'light')  :
     document.body.setAttribute('data-theme', 'dark')
 });
+
