@@ -70,11 +70,14 @@ p,
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  row-gap: 1rem;
+  grid-template-rows: 0.5fr auto 0.1fr 0.1fr; }
 
 .header {
   display: grid;
-  grid-template-columns: 50% 50%; }
+  grid-template-columns: 50% 50%;
+  margin-top: 10rem; }
   .header .switcher {
     display: flex;
     justify-content: flex-end;
