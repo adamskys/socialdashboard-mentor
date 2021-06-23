@@ -1,7 +1,5 @@
 # Frontend Mentor - Social media dashboard with theme switcher solution
 
-Note it is not finished. I have yet to do theme switcher and work on mobile version.
-
 This is a solution to the [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
@@ -37,16 +35,15 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 - Flexbox
 - CSS Grid
 - SASS
+- JavaScript
 
 ### What I learned
 
-
-
+Working with Grid, adding minor JS functionalities and switcher with Flexbox. It helped me understand Grid more, however there is still much to do.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
+I had issues with adding transition on flexbox switcher, so I need to find out how to do that. Also I am not sure if transition on body is a good way, to make theme changing smooth.
 
 ### Useful resources
 
