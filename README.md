@@ -43,15 +43,17 @@ Light theme
 ### What I learned
 
 Working with Grid, adding minor JS functionalities and switcher with Flexbox. It helped me understand Grid more, however there is still much to do.
+Also I added localstorage, to save chosen theme.
 
 ### Continued development
 
-I had issues with adding transition on flexbox switcher, so I need to find out how to do that. Also I am not sure if transition on body is a good way, to make theme changing smooth. What's more there are huge white spaces within my grid, especially in Overview section but I couldn't manage to fix that.
+I had issues with adding transition on flexbox switcher, so I need to find out how to do that. Also I am not sure if transition on body is a good way, to make theme changing smooth. 
 
 ### Useful resources
 
 - [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - Great Grid guide.
 - [Border gradient](https://dev.to/rumansaleem/gradient-borders-with-css-3mnk) - Trick to make gradient border with radius.
+- [Flexbox Switcher](https://www.cssscript.com/ios-toggle-switch-flexbox/) - Guide to make Flexbox switcher.
 
 ## Author
 
