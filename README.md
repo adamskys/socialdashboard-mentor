@@ -43,7 +43,7 @@ Working with Grid, adding minor JS functionalities and switcher with Flexbox. It
 
 ### Continued development
 
-I had issues with adding transition on flexbox switcher, so I need to find out how to do that. Also I am not sure if transition on body is a good way, to make theme changing smooth.
+I had issues with adding transition on flexbox switcher, so I need to find out how to do that. Also I am not sure if transition on body is a good way, to make theme changing smooth. What's more there are huge white spaces within my grid, especially in Overview section but I couldn't manage to fix that.
 
 ### Useful resources
 
