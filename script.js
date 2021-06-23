@@ -1,5 +1,4 @@
 const input = document.querySelector('.switcher input');
-const span = document.querySelector('.switcher span');
 
 
 
