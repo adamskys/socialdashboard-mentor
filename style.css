@@ -94,8 +94,7 @@ p,
       display: flex;
       flex-direction: column; }
       .header .switcher .toggle:hover {
-        background: linear-gradient(to right, #378fe6, #3eda82);
-        transition: 0.4s; }
+        background: linear-gradient(to right, #378fe6, #3eda82); }
     .header .switcher .toggle-active {
       width: 60px;
       height: 32px;
@@ -112,10 +111,9 @@ p,
       border-radius: 12px;
       margin: 4px; }
     .header .switcher input:checked + .toggle {
-      background: gray; }
+      background: #aeb3cb; }
       .header .switcher input:checked + .toggle:hover {
-        background: linear-gradient(to right, #378fe6, #3eda82);
-        transition: 0.4s; }
+        background: linear-gradient(to right, #378fe6, #3eda82); }
     .header .switcher input:checked + .toggle > .slider {
       align-self: flex-end; }
 
