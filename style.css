@@ -40,8 +40,8 @@ body {
 
 body:before {
   content: '';
-  position: fixed;
-  height: 30%;
+  position: absolute;
+  min-height: 30%;
   width: 100%;
   background: var(--top);
   z-index: 1;
@@ -72,12 +72,12 @@ p,
   position: relative;
   z-index: 2;
   row-gap: 1rem;
-  grid-template-rows: 0.5fr auto 0.1fr 0.1fr; }
+  grid-template-rows: 0.1fr 0.6fr 0.1fr 0.1fr; }
 
 .header {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-top: 10rem; }
+  margin-top: 5rem; }
   .header .switcher {
     display: flex;
     justify-content: flex-end;
